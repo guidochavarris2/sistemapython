@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Computadora</title>
+</head>
+<body>
+    <h1>Computadora</h1>
+    <p>Marca: {{ computadora.marca }}</p>
+    <p>Modelo: {{ computadora.modelo }}</p>
+    <p>Cantidad: {{ computadora.cantidad }}</p>
+    <a href="{{ url_for('editar_computadora', id=computadora.id) }}">Editar</a>
+    <form action="{{ url_for('eliminar_computadora', id=computadora.id) }}" method="POST">
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{{ url_for('lista_computadoras') }}">Volver</a>
+</body>
+</html>

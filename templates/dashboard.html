@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ nombre }}</h1>
+
+    <h2>Estadísticas</h2>
+    <ul>
+        <li>Total de Computadoras: {{ total_computadoras }}</li>
+        <li>Total de Carpetas: {{ total_carpetas }}</li>
+        <li>Total de Sillas: {{ total_sillas }}</li>
+        <li>Total de Motores: {{ total_motores }}</li>
+    </ul>
+
+    <h2>Administración</h2>
+    <ul>
+        <li><a href="{{ url_for('lista_computadoras') }}">Ver Computadoras</a></li>
+        <li><a href="{{ url_for('lista_carpetas') }}">Ver Carpetas</a></li>
+        <li><a href="{{ url_for('lista_sillas') }}">Ver Sillas</a></li>
+        <li><a href="{{ url_for('lista_motores') }}">Ver Motores</a></li>
+    </ul>
+
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+</body>
+</html>

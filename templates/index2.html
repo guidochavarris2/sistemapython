@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>instituto &mdash; pasco</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+  
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="/" class="h2 mb-0"> <img width="100px" style="margin-top: 20px;" src="https://tse1.mm.bing.net/th?id=OIP.NnKLzRtmj5weot55H69lzwHaHa&pid=Api&P=0&h=180" alt=""> <span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#home-section" class="nav-link">home</a></li>
+                <li><a href="#about-section" class="nav-link">nosotros</a></li>
+                <li><a href="#training-section" class="nav-link">programas</a></li>
+                
+                <li><a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
+
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+
+  
+    <section class="site-blocks-cover overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 align-self-center">
+
+            <div class="row">
+              <div class="col-lg-11">
+
+                <h1>INSTITUTO DE EDUCACION</h1>
+                <p>SUPERIOR TECNOLOGICO PUBLICO PAUCARTAMBO PASCO</p>
+                
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section> 
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12" style="margin-top: -20%;">
+            <div class="slide-one-item home-slider owl-carousel">
+              <img src="https://iestpaucartambo.edu.pe/portal/images/banners/Programa_CI.jpg" alt="Image" class="img-fluid img">
+              <img src="https://www.iestpaucartambo.edu.pe/portal/images/banners/Programa_MA.jpg" alt="Image" class="img-fluid img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="about-section">
+      <div class="container">
+        
+        <div class="row">
+          
+          <div class="col-md-5 mr-auto mb-5">
+            <h2 class="text-black mb-4">Bienvenidos al
+              Instituto</h2>
+            <p>Somos un Instituto de Educación Superior Tecnológico que formamos talentos humanos con valores, capacidad crítica y emprendedora comprometida en el desarrollo del Pais..</p>
+           
+          </div>
+          
+        </div>
+
+        
+      </div>
+    </section>
+  
+
+    <section class="site-section bg-light" id="training-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="text-black">PROGRAMAS</h2>
+            <p>Ofrecemos nuestros mejores programas.</p>
+          </div>
+        </div>
+
+        <div class="nonloop-block-13 owl-style owl-carousel">
+          <div class="training">
+            <figure class="mb-4"><img src="https://iestpaucartambo.edu.pe/portal/images/banners/Programa_ET.jpg" alt="Image" class="img-fluid"></figure>
+            <h3 class="text-black mb-3">Enfermeria tecnica</h3>
+           
+          </div>
+
+          <div class="training">
+            <figure class="mb-4"><img src="https://iestpaucartambo.edu.pe/portal/images/banners/Programa_MA.jpg" alt="Image" class="img-fluid"></figure>
+            <h3 class="text-black mb-3">Mecanica Automotriz</h3>
+            
+          </div>
+
+          <div class="training">
+            <figure class="mb-4"><img src="https://iestpaucartambo.edu.pe/portal/images/banners/Programa_CI.jpg" alt="Image" class="img-fluid"></figure>
+            <h3 class="text-black mb-3">Arquitectura de Plataformas y Servicios TI</h3>
+            
+          </div>
+
+         
+        </div>
+
+      </div>
+    </section>
+    
+
+
+    
+
+    
+   
+    
+    
+    <footer class="site-footer bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="footer-heading mb-4"><img src="https://iestpaucartambo.edu.pe/portal/images/logo_IESTP_2021_botom.png" alt=""></h2>
+            <p>Av. La Paz No 300, Paucartambo - Pasco</p><br>
+            <p>941 875 652
+              956 438 690</p>
+              <br><p>info@iestpaucartambo.edu.pe</p>
+          </div>
+
+
+          <div class="col-md-3 ml-auto">
+            <h2 class="footer-heading mb-4">NOSOTROS</h2>
+            <ul class="list-unstyled">
+              <li><a href="/" class="smoothscroll">Reseña Histórica</a></li>
+              <li><a href="/" class="smoothscroll">Misión Visión</a></li>
+              <li><a href="/"class="smoothscroll">Plana Jerárquica</a></li>
+              <li><a href="/" class="smoothscroll">Plana Docentes</a></li>
+              <li><a href="/" class="smoothscroll">Documentos de Gestión</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <div class="mb-5">
+              <h2 class="footer-heading mb-4">Follow Us</h2>
+              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </div>
+
+            
+
+          </div>
+        </div>
+
+        <div class="row pt-5 mt-5 text-left">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <p>Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> © Instituto de Educación Superior Tecnológico Público Paucartambo | Pasco 2024. Design by Computación e Informática <i
+                  class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"></a></p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typed.js') }}"></script>
+    <script>
+    var typed = new Typed('.typed-words', {
+        strings: [" Business Speakers", " Life Coach"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+
+
+  </body>
+</html>

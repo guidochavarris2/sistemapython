@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+     <!-- Favicon -->
+     <link rel="icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}" type="image/x-icon" />
+
+     <!-- Fonts and icons -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/webfont/webfont.min.js') }}"></script>
+     <script>
+       WebFont.load({
+         google: { families: ["Public Sans:300,400,500,600,700"] },
+         custom: {
+           families: [
+             "Font Awesome 5 Solid",
+             "Font Awesome 5 Regular",
+             "Font Awesome 5 Brands",
+             "simple-line-icons",
+           ],
+           urls: ["{{ url_for('static', filename='assets/css/fonts.min.css') }}"],
+         },
+         active: function () {
+           sessionStorage.fonts = true;
+         },
+       });
+     </script>
+ 
+     <!-- CSS Files -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" />
+     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins.min.css') }}" />
+     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/kaiadmin.min.css') }}" />
+ 
+     <!-- CSS Just for demo purpose, don't include it in your project -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/demo.css') }}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a href="{{ url_for('dashboard') }}" class="logo">
+              <img
+                src="https://carrerasuniversitarias.pe/logos/original/logo-instituto-de-educacion-superior-tecnologico-publico-pasco.webp"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="20"
+              />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+              <li class="nav-item active">
+                <a
+                  data-bs-toggle="collapse"
+                  href="#dashboard"
+                  class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Componentes</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="dashboard">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="{{ url_for('listar_usuarios') }}">
+                        <span class="sub-item">Usuarios</span>
+                      </a>  
+                    <li>
+                    <li>
+                      <a href="{{ url_for('lista_computadoras') }}">
+                        <span class="sub-item">Computadoras </span>
+                      </a>
+                     
+                    </li>
+                    <li>
+                      <a href="{{ url_for('lista_carpetas') }}">
+                        <span class="sub-item">Carpetas </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="{{ url_for('lista_sillas') }}">
+                        <span class="sub-item">Sillas </span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="{{ url_for('lista_motores') }}">
+                        <span class="sub-item">Motores </span>
+                      </a>
+                    </li>
+
+                    <li>
+
+          
+                   
+                     
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      
+
+      <div class="main-panel">
+
+        
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="index.html" class="logo">
+                <img
+                  src="assets/img/kaiadmin/logo_light.svg"
+                  alt="navbar brand"
+                  class="navbar-brand"
+                  height="20"
+                />
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          
+          <!-- End Navbar -->
+        </div>
+
+        <div class="container" style="width: 70%;">
+          <div class="page-inner">
+            <div
+              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
+            >
+         
+            
+            <div class="row">
+                <div class="ms-md-auto py-2 py-md-0">
+                    
+                    <a href="{{ url_for('agregar_carpeta') }}" class="btn btn-primary btn-round">Agregar +</a>
+                  </div>    
+              <div class="col-md-12">
+                <div class="card card-round">
+                  <div class="card-header">
+                    <div class="card-head-row card-tools-still-right">
+                      <h4 class="card-title">Listado</h4>
+                      <div class="card-tools">
+                        <button
+                          class="btn btn-icon btn-link btn-primary btn-xs"
+                        >
+                          <span class="fa fa-angle-down"></span>
+                        </button>
+                        <button
+                          class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"
+                        >
+                          <span class="fa fa-sync-alt"></span>
+                        </button>
+                        <button
+                          class="btn btn-icon btn-link btn-primary btn-xs"
+                        >
+                          <span class="fa fa-times"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <p class="card-category">
+                      administracion de objetos
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-20">
+                        <div class="table-responsive table-hover table-sales">
+                          <table class="table">
+                            <tbody>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>color</th>
+                                    <th>tamaño</th>
+                                    <th>cantidad</th>
+                                    <th>accion</th>
+                                </tr>
+
+                                {% for carpeta in carpetas %}
+                              <tr>
+                                <td>
+                                  <div class="flag">
+                                    {{carpeta.id}}
+                                    <img width="25px" height="25px"
+                                      src="https://tse4.mm.bing.net/th?id=OIP.4wXy2YwgfjdG0UA7_2_4KQHaGL&amp;pid=Api&amp;P=0&amp;h=180"
+                                    />
+                                  </div>
+                                </td>
+                                <td>{{carpeta.color}}</td>
+                                <td class="text-end">{{carpeta.tamaño}}</td>
+                                <td class="text-end">{{carpeta.cantidad}}</td>
+                                <th><a href="{{ url_for('editar_carpeta', id=carpeta.id) }}">Editar</a>
+                                    <form action="{{ url_for('eliminar_carpeta', id=carpeta.id) }}" method="POST" style="display:inline;">
+                                        <button type="submit" style="background-color: red;">Eliminar</button>
+                                    </form></th>
+                              </tr>
+
+                              {% endfor %}
+                              
+                          
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <!-- Custom template | don't include it in your project! -->
+
+      <!-- End Custom template -->
+    </div>
+    <!--   Core JS Files   -->
+     <!-- Scripts -->
+     <script src="{{ url_for('static', filename='assets/js/core/jquery-3.7.1.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='assets/js/core/popper.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='assets/js/core/bootstrap.min.js') }}"></script>
+ 
+     <!-- jQuery Scrollbar -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+ 
+     <!-- Chart JS -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/chart.js/chart.min.js') }}"></script>
+ 
+     <!-- jQuery Sparkline -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
+ 
+     <!-- Chart Circle -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/chart-circle/circles.min.js') }}"></script>
+ 
+     <!-- Datatables -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/datatables/datatables.min.js') }}"></script>
+ 
+     <!-- Bootstrap Notify -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+ 
+     <!-- jQuery Vector Maps -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/jsvectormap/jsvectormap.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='assets/js/plugin/jsvectormap/world.js') }}"></script>
+ 
+     <!-- Sweet Alert -->
+     <script src="{{ url_for('static', filename='assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
+ 
+     <!-- Kaiadmin JS -->
+     <script src="{{ url_for('static', filename='assets/js/kaiadmin.min.js') }}"></script>
+ 
+     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+     <script src="{{ url_for('static', filename='assets/js/setting-demo.js') }}"></script>
+     <script src="{{ url_for('static', filename='assets/js/demo.js') }}"></script>
+     
+     <script>
+       $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+         type: "line",
+         height: "70",
+         width: "100%",
+         lineWidth: "2",
+         lineColor: "#177dff",
+         fillColor: "rgba(23, 125, 255, 0.14)",
+       });
+ 
+       $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+         type: "line",
+         height: "70",
+         width: "100%",
+         lineWidth: "2",
+         lineColor: "#f3545d",
+         fillColor: "rgba(243, 84, 93, .14)",
+       });
+ 
+       $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+         type: "line",
+         height: "70",
+         width: "100%",
+         lineWidth: "2",
+         lineColor: "#ffa534",
+         fillColor: "rgba(255, 165, 52, .14)",
+       });
+     </script>
+  </body>
+</html>
+

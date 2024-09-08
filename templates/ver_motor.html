@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Motor</title>
+</head>
+<body>
+    <h1>Motor</h1>
+    <p>Tipo: {{ motor.tipo }}</p>
+    <p>Potencia: {{ motor.potencia }}</p>
+    <p>Cantidad: {{ motor.cantidad }}</p>
+    <a href="{{ url_for('editar_motor', id=motor.id) }}">Editar</a>
+    <form action="{{ url_for('eliminar_motor', id=motor.id) }}" method="POST">
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{{ url_for('lista_motores') }}">Volver</a>
+</body>
+</html>

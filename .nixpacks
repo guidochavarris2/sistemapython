@@ -1,11 +1,11 @@
 # .nixpacks
-
 setup:
   - python3
   - gcc
 
 install:
-  - python -m venv --copies /opt/venv && . /opt/venv/bin/activate
+  - python -m venv --copies /opt/venv
+  - . /opt/venv/Scripts/activate
   - pip install -r requirements.txt
 
 start:

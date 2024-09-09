@@ -12,7 +12,7 @@ app.config.from_object(Config)
 db.init_app(app)
 bcrypt = Bcrypt(app)
 
-# Configurar LoginManager
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -298,7 +298,7 @@ def agregar_usuario():
         nombre = request.form.get('nombre')
         correo = request.form.get('correo')
         contrasena = request.form.get('contrasena')
-        rol = 'usuario'  # Puedes cambiar esto según la lógica de tu aplicación
+        rol = 'usuario' 
 
         # Encriptar la contraseña con bcrypt
         hashed_password = bcrypt.generate_password_hash(contrasena).decode('utf-8')

@@ -4,6 +4,7 @@ from flask_login import LoginManager, login_user, logout_user, login_required, c
 from flask_bcrypt import Bcrypt
 from models import db, Usuario, Computadora, Carpeta, Silla, Motor
 from config import Config
+import os
 
 app = Flask(__name__)
 app.config.from_object(Config)
